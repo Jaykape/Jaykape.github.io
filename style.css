@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: courier, monospace;
+    margin: 0;
+    background-image: url('star.gif');
+  }
+
+  h1 {
+    margin-bottom: 0px;
+  }
+  h3 {
+    margin-top: 0px;
+  }
+  .overall {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgba(0, 0, 255, 0.2);
+  }
+
+  .header {
+    text-align: center;
+    color:  rgba(255, 255, 255, 0.7);
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", 
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol";
+    
+  }
+
+  .header2 {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", 
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  .menu {
+    float: left;
+    width: 33.3%;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", 
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  .menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .button {
+    background-color: rgba(255, 255, 255, 0.3); /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Increase size */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    font-size: 16px; /* Adjust font size */
+    margin: 30px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 2px; /* Rounded corners */
+  }
+
+  .main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  .right {
+    background-color: lightblue;
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    .menu,
+    .main,
+    .right {
+      width: 100%;
+    }
+  }
