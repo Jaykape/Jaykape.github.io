@@ -8,8 +8,10 @@
     background-image: url('star.gif');
   }
 
+ 
   h1 {
     margin-bottom: 0px;
+    
   }
   h3 {
     margin-top: 0px;
@@ -25,7 +27,7 @@
   .header {
     text-align: center;
     color:  rgba(255, 255, 255, 0.7);
-    padding: 0px;
+    padding: 10px;
     position: relative;
     width: 100%;
     font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", 
@@ -61,19 +63,20 @@
   }
 
   .button {
-    background-color: rgba(255, 255, 255, 0.3); /* Button background color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Increase size */
+    background-color: rgba(255, 255, 255, 0.3); 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
     text-align: center;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     display: inline-block;
-    font-size: 16px; /* Adjust font size */
-    margin: 30px; /* Space between buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 2px; /* Rounded corners */
+    font-size: 16px; 
+    margin: 30px; 
+    cursor: pointer; 
+    border-radius: 2px; 
   }
 
+  
   .main {
     float: left;
     width: 60%;
