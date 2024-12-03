@@ -5,7 +5,7 @@
   body {
     font-family: courier, monospace;
     margin: 0;
-    background-image: url('resourceindex/star.gif');
+    background-image: url('star.gif');
   }
 
  
@@ -19,8 +19,8 @@
   .overall {
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: rgba(0, 0, 255, 0.2);
   }
 
