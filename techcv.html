@@ -9,7 +9,7 @@
     }
 
     body {
-      font-family: 'Courier New', courier, monospace;
+      font-family: sans-serif;
       letter-spacing: -0.5px;
     }
 
@@ -17,19 +17,21 @@
       margin-bottom: 20px; /* Space between buttons and content */
     }
 
-    .boton-alex, .boton-exel, .boton-py {
+    .botonnetwork, .botoncloud, .botondata, .botonetc {
       display: inline-block;
       padding: 10px 20px;
       margin: 5px;
-      background-color: #4CAF50;
+      background-color: #6a4caf;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 3px;
+      border: 2px solid black;
       cursor: pointer;
+      font-family: sans-serif; letter-spacing: 2px;
     }
 
-    .boton-alex:hover, .boton-exel:hover, .boton-py:hover {
-      background-color: #45a049;
+    .botonnetwork:hover, .botoncloud:hover, .botondata:hover, .botonetc:hover {
+      background-color: #000000;
     }
 
     .content-container {
@@ -37,9 +39,9 @@
       margin-top: 20px;
     }
 
-    .swap {
+    .ddbox {
       display: none; /* Hide all content by default */
-      background: #d79a9a;
+      background: #f2dddd;
       padding: 20px;
       border: 2px solid black;
       max-width: 1000px;
@@ -49,35 +51,41 @@
 </head>
 
 <body>
-  <div style="background-color:#bcefd2; max-width: 650px; padding-left: 10px; border: 2px solid black; margin-bottom: 10px;">
+  <div style="background-color:#d4ecd6; max-width: 500px; padding-left: 10px; border: 2px solid black; margin-bottom: 10px;">
     <h3>Tech Learning Documentation</h3>
-    <p>This is a documentation of my learning in various tech topics. <br>This should be a complement to my PDF CV for job applications.<br><b>Natthajak Kamkru</b></p>
+    <p>This page is a documentation of my learning in various tech domains.</p><p>It serves as a complement to the pdf version of my CV.</p><p><b>Natthajak Kamkru</b></p>
   </div>
 
   <!-- Button Container -->
   <div class="button-container">
-    <a href="#" class="boton-alex">Networking</a>
-    <a href="#" class="boton-exel">OS</a>
-    <a href="#" class="boton-py">Cloud</a>
-    <a href="#" class="boton-py">Data</a>
+    <a href="#" class="botonnetwork"><b>networking</b></a>
+    <a href="#" class="botoncloud"><b>cloud</b></a>
+    <a href="#" class="botondata"><b>data</b></a>
+    <a href="#" class="botonetc"><b>etc.</b></a>
   </div>
 
   <!-- Content Container -->
   <div class="content-container">
-    <div id="div-alex" class="swap">
-      <h2>Alex Muñoz</h2>
+    <div id="divnetwork" class="ddbox">
+      <h2>Computer Networking</h2>
       <h3>«Para nosotros la fiesta es uno de los puntos vitales y más importantes, tenemos un buen presupuesto reservado para ello.»</h3>
       <p>Alex Muñoz, como fundador de Exel Eventos, cuenta con una dilatada experiencia en bodas. Además, es técnico de sonido e iluminación, trata cada boda como una obra de arte única e irrepetible. ¡Está deseando conocerte!</p>
     </div>
 
-    <div id="div-exel" class="swap">
-      <h2>Exel DJs</h2>
+    <div id="divcloud" class="ddbox">
+      <h2>Cloud</h2>
       <h3>«Le doy mucha <span style="text-decoration: underline;">importancia a la fiesta de mi boda</span> y tengo presupuesto reservado para esta parte de la boda.»</h3>
       <p>Exel DJs es tu mejor opción: DJs animadores que saldrán a la pista si la fiesta sufre uno o varios bajones, y lo más importante… contarás con DJs experimentados y podrás conocerles desde el mismo momento de la contratación, aunque quede más de un año para tu boda. Además, podrás elegir entre distintos paquetes de iluminación para la fiesta.</p>
     </div>
 
-    <div id="div-py" class="swap">
-      <h2>Play Yourself</h2>
+    <div id="divdata" class="ddbox">
+      <h2>Data</h2>
+      <h3>«Tengo muy poco presupuesto y no me importa contar con un buen DJ, le daré una Playlist o incluso me vale con el equipo alquilado.»</h3>
+      <p>Play Yourself es tu mejor solución, puedes alquilarlo sin DJ o contar con un DJ tradicional NO Animador.</p>
+    </div>
+
+    <div id="divetc" class="ddbox">
+      <h2>ETC.</h2>
       <h3>«Tengo muy poco presupuesto y no me importa contar con un buen DJ, le daré una Playlist o incluso me vale con el equipo alquilado.»</h3>
       <p>Play Yourself es tu mejor solución, puedes alquilarlo sin DJ o contar con un DJ tradicional NO Animador.</p>
     </div>
@@ -87,25 +95,31 @@
   <script>
     $(document).ready(function() {
       // Hide all content initially
-      $('.swap').hide();
+      $('.ddbox').hide();
 
       // Add click event for each button
-      $('.boton-alex').click(function(e) {
+      $('.botonnetwork').click(function(e) {
         e.preventDefault();
-        $('#div-alex').fadeToggle(); // Toggle visibility
-        $('#div-exel, #div-py').hide(); // Hide other sections
+        $('#divnetwork').fadeToggle(); // toggle visibility
+        $('#divcloud, #divdata, #divetc').hide(); // hide other sections
       });
 
-      $('.boton-exel').click(function(e) {
+      $('.botoncloud').click(function(e) {
         e.preventDefault();
-        $('#div-exel').fadeToggle(); // Toggle visibility
-        $('#div-alex, #div-py').hide(); // Hide other sections
+        $('#divcloud').fadeToggle(); 
+        $('#divnetwork, #divdata, #divetc').hide(); 
       });
 
-      $('.boton-py').click(function(e) {
+      $('.botondata').click(function(e) {
         e.preventDefault();
-        $('#div-py').fadeToggle(); // Toggle visibility
-        $('#div-alex, #div-exel').hide(); // Hide other sections
+        $('#divdata').fadeToggle(); 
+        $('#divcloud, #divnetwork, #divetc').hide();
+      });
+
+      $('.botonetc').click(function(e) {
+        e.preventDefault();
+        $('#divetc').fadeToggle(); 
+        $('#divnetwork, #divdata, #divcloud').hide(); 
       });
     });
   </script>
