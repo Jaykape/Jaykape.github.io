@@ -1,68 +1,113 @@
 <!DOCTYPE html>
 <html>
- 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
-.menu {
-  float: left;
-  width: 20%;
-}
-.menuitem {
-  padding: 8px;
-  margin-top: 7px;
-  border-bottom: 1px solid #f1f1f1;
-}
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  overflow: hidden;
-}
-.right {
-  background-color: lightblue;
-  float: left;
-  width: 20%;
-  padding: 10px 15px;
-  margin-top: 7px;
-}
-
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-}
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-}
-</style>
-
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Learning Documentation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', courier, monospace;
+      letter-spacing: -0.5px;
+    }
+
+    .button-container {
+      margin-bottom: 20px; /* Space between buttons and content */
+    }
+
+    .boton-alex, .boton-exel, .boton-py {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .boton-alex:hover, .boton-exel:hover, .boton-py:hover {
+      background-color: #45a049;
+    }
+
+    .content-container {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .swap {
+      display: none; /* Hide all content by default */
+      background: #d79a9a;
+      padding: 20px;
+      border: 2px solid black;
+      max-width: 1000px;
+      margin-left: 5px;
+    }
+  </style>
 </head>
 
-<body style="font-family: courier, monospace">
- 
- <br> 
-    <h3>Tech Learning Documentation </h3><p style="line-height: 1.2;"> This is a documentation of my learning in various tech topics.<br><br> Natthajak Kamkru </body></html></p>
+<body>
+  <div style="background-color:#bcefd2; max-width: 650px; padding-left: 10px; border: 2px solid black; margin-bottom: 10px;">
+    <h3>Tech Learning Documentation</h3>
+    <p>This is a documentation of my learning in various tech topics. <br>This should be a complement to my PDF CV for job applications.<br><b>Natthajak Kamkru</b></p>
+  </div>
 
-    <div style="width:10000px; height:3000px; background-color:#FFFFFF;">
+  <!-- Button Container -->
+  <div class="button-container">
+    <a href="#" class="boton-alex">Networking</a>
+    <a href="#" class="boton-exel">OS</a>
+    <a href="#" class="boton-py">Cloud</a>
+    <a href="#" class="boton-py">Data</a>
+  </div>
 
+  <!-- Content Container -->
+  <div class="content-container">
+    <div id="div-alex" class="swap">
+      <h2>Alex Muñoz</h2>
+      <h3>«Para nosotros la fiesta es uno de los puntos vitales y más importantes, tenemos un buen presupuesto reservado para ello.»</h3>
+      <p>Alex Muñoz, como fundador de Exel Eventos, cuenta con una dilatada experiencia en bodas. Además, es técnico de sonido e iluminación, trata cada boda como una obra de arte única e irrepetible. ¡Está deseando conocerte!</p>
+    </div>
 
+    <div id="div-exel" class="swap">
+      <h2>Exel DJs</h2>
+      <h3>«Le doy mucha <span style="text-decoration: underline;">importancia a la fiesta de mi boda</span> y tengo presupuesto reservado para esta parte de la boda.»</h3>
+      <p>Exel DJs es tu mejor opción: DJs animadores que saldrán a la pista si la fiesta sufre uno o varios bajones, y lo más importante… contarás con DJs experimentados y podrás conocerles desde el mismo momento de la contratación, aunque quede más de un año para tu boda. Además, podrás elegir entre distintos paquetes de iluminación para la fiesta.</p>
+    </div>
 
-           
-</div>
-      
+    <div id="div-py" class="swap">
+      <h2>Play Yourself</h2>
+      <h3>«Tengo muy poco presupuesto y no me importa contar con un buen DJ, le daré una Playlist o incluso me vale con el equipo alquilado.»</h3>
+      <p>Play Yourself es tu mejor solución, puedes alquilarlo sin DJ o contar con un DJ tradicional NO Animador.</p>
+    </div>
+  </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Hide all content initially
+      $('.swap').hide();
+
+      // Add click event for each button
+      $('.boton-alex').click(function(e) {
+        e.preventDefault();
+        $('#div-alex').fadeToggle(); // Toggle visibility
+        $('#div-exel, #div-py').hide(); // Hide other sections
+      });
+
+      $('.boton-exel').click(function(e) {
+        e.preventDefault();
+        $('#div-exel').fadeToggle(); // Toggle visibility
+        $('#div-alex, #div-py').hide(); // Hide other sections
+      });
+
+      $('.boton-py').click(function(e) {
+        e.preventDefault();
+        $('#div-py').fadeToggle(); // Toggle visibility
+        $('#div-alex, #div-exel').hide(); // Hide other sections
+      });
+    });
+  </script>
 </body>
 </html>
