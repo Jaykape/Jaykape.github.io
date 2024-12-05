@@ -1,6 +1,7 @@
 
 
 .bigbox {
+    text-align: center;
     display: flex;
     justify-content: center;
     background-image: url(snapbackground.jpeg);
@@ -15,16 +16,22 @@
     font-family: Garamond, serif;
     font-size: 50px;
     color: white;
-    margin-left: 80px;
     margin-bottom: 0px;
 
 }
 
 .bigbox h2 {
     font-family: Garamond, serif;
-    font-size: 50px;
+    font-size: 20px;
     color: white;
-    margin-left: 0px;
+    margin-bottom: 0px;
+
+}
+
+.bigbox p {
+    font-family: Garamond, serif;
+    font-size: 20px;
+    color: white;
     margin-bottom: 0px;
 
 }
@@ -69,7 +76,7 @@
     }
 
     .mainbutton {
-    margin-left: 150px; 
+    
     width: 50px; 
     height: 50px;
     background-image: url('button.png'); 
