@@ -78,9 +78,15 @@ a {
     .mainbutton {
         display: none;
     }
+
+    .empti {margin-bottom: 50px;}
 }
 
-@media (max-width: 600px) {
+@media (min-width: 501px) and (max-width: 600px) {
+    .empti {margin-bottom: 30px;}
+}
+
+@media (max-width: 500px) {
     .bigbox {
         
         min-width: auto;
@@ -101,7 +107,7 @@ a {
     cursor: pointer; 
     }
 
-  
+    .empti {margin-bottom: 5px;}
 }
 
 
