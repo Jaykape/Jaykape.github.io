@@ -35,7 +35,7 @@ a {
 .bigbox h3 {
     font-family: Garamond, serif;
     font-size: 35px;
-    color: rgb(27, 24, 65);
+    color: rgb(45, 73, 111);
     margin-bottom: 0px;
 
 }
@@ -108,9 +108,11 @@ a {
     }
 
     .empti {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: -10px;
+        margin-bottom: -10px;
     }
+
+    
 }
 
 
@@ -122,9 +124,7 @@ a {
     font-family: sans-serif; letter-spacing: 2px;
   }
 
-  .botproj:hover, .botover:hover, .botcont:hover, .botetc:hover {
-    background-color: #000000;
-  }
+  
 
   .ddbox {
     display: none; /* Initially hidden */
