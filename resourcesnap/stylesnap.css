@@ -107,7 +107,10 @@ a {
     cursor: pointer; 
     }
 
-    .empti {margin-bottom: 5px;}
+    .empti {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
 
 
