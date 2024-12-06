@@ -1,9 +1,13 @@
-
+a {
+    text-decoration: none; /* Removes the underline */
+  }
 
 .bigbox {
     text-align: center;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the top vertically */
+    align-items: center; /* Optionally align items horizontally to the center */
     background-image: url(images/snapbackground.jpeg);
     min-height: 500px;
     background-size: contain;
@@ -91,3 +95,22 @@
 
   
 }
+
+
+
+
+
+.botproj, .botover, .botcont, .botetc {
+    cursor: pointer;
+    font-family: sans-serif; letter-spacing: 2px;
+  }
+
+  .botproj:hover, .botover:hover, .botcont:hover, .botetc:hover {
+    background-color: #000000;
+  }
+
+  .ddbox {
+    display: none; /* Hide all content by default */
+    padding: 20px;
+    max-width: 1000px;
+  }
