@@ -1,29 +1,25 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Hide all content initially
     $('.ddbox').hide();
 
-    // Add click event for each button
-    $('.botproj').click(function(e) {
-      e.preventDefault();
-      $('#divnetwork').fadeToggle(); // toggle visibility
-      $('#divcloud, #divdata, #divetc').hide(); // hide other sections
-    });
+    // Utility function to handle visibility toggling
+    function toggleSection(buttonClass, sectionId) {
+        $(buttonClass).click(function (e) {
+            e.preventDefault();
+            
+            // Hide all sections first
+            $('.ddbox').hide().attr('aria-expanded', 'false');
+            
+            // Toggle visibility of the selected section
+            $(sectionId).fadeToggle().attr('aria-expanded', function (_, attr) {
+                return attr === 'true' ? 'false' : 'true';
+            });
+        });
+    }
 
-    $('.botover').click(function(e) {
-      e.preventDefault();
-      $('#divcloud').fadeToggle(); 
-      $('#divnetwork, #divdata, #divetc').hide(); 
-    });
-
-    $('.botcont').click(function(e) {
-      e.preventDefault();
-      $('#divdata').fadeToggle(); 
-      $('#divcloud, #divnetwork, #divetc').hide();
-    });
-
-    $('.botetc').click(function(e) {
-      e.preventDefault();
-      $('#divetc').fadeToggle(); 
-      $('#divnetwork, #divdata, #divcloud').hide(); 
-    });
-  });
+    // Assign toggle functionality to each button
+    toggleSection('.botproj', '#divnetwork');
+    toggleSection('.botover', '#divcloud');
+    toggleSection('.botcont', '#divdata');
+    toggleSection('.botetc', '#divetc');
+});
