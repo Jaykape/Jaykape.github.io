@@ -9,11 +9,12 @@ a {
     justify-content: flex-start; /* Align items to the top vertically */
     align-items: center; /* Optionally align items horizontally to the center */
     background-image: url(images/snapbackground.jpeg);
-    min-height: 500px;
-    background-size: contain;
+    min-height: 385px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center top;
     margin-top: 15px;
+    margin-bottom: -50px;
 }
 
 .bigbox h1 {
@@ -66,32 +67,12 @@ a {
     max-height: 700px; /* Limits the height, adjust as needed */
 }
 
-@media (min-width: 601px) {
-    .bigbox {
-        
-        min-width: 1000px;
-        min-height: 1500px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }    
 
-    .mainbutton {
-        display: none;
-    }
-
-    .empti {margin-bottom: 50px;}
+.ddbox {
+    margin-top: -200px;
 }
 
-@media (min-width: 501px) and (max-width: 600px) {
-    .empti {margin-bottom: 30px;}
-}
 
-@media (max-width: 500px) {
-    .bigbox {
-        
-       
-        background-repeat: no-repeat;
-    }
 
     .mainbutton {
     
@@ -112,8 +93,6 @@ a {
         margin-bottom: -10px;
     }
 
-    
-}
 
 
 
@@ -134,4 +113,9 @@ a {
     padding: 20px;
     max-width: 1000px;
     margin-top: 20px;
+    color: rgb(61, 102, 137);
 }
+
+  .ddbox h3 {
+    font-size: 30px;
+  }
