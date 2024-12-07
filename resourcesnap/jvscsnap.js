@@ -23,3 +23,5 @@ $(document).ready(function () {
     toggleSection('.botcont', '#divdata');
     toggleSection('.botetc', '#divetc');
 });
+
+
