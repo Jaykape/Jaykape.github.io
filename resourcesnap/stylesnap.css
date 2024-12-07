@@ -119,3 +119,8 @@ a {
   .ddbox h3 {
     font-size: 30px;
   }
+
+  .ddbox p {
+    font-size: 17px;
+    font-family: Georgia, serif;
+  }
