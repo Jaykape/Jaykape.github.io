@@ -18,9 +18,9 @@ $(document).ready(function () {
     }
 
     // Assign toggle functionality to each button
-    toggleSection('.botproj', '#divnetwork');
-    toggleSection('.botover', '#divcloud');
-    toggleSection('.botcont', '#divdata');
+    toggleSection('.botproj', '#divproj');
+    toggleSection('.botover', '#divover');
+    toggleSection('.botcont', '#divcont');
     toggleSection('.botetc', '#divetc');
 });
 

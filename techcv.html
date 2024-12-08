@@ -11,6 +11,7 @@
     body {
       font-family: sans-serif;
       letter-spacing: -0.5px;
+      background-color: black;
     }
 
     .button-container {
@@ -22,16 +23,19 @@
       padding: 10px 20px;
       margin: 5px;
       background-color: #6a4caf;
+      background-image: linear-gradient(#4c4cfe, #a033ff);
       color: white;
       text-decoration: none;
       border-radius: 3px;
-      border: 2px solid black;
+      border: 2px solid rgb(34, 34, 43);
       cursor: pointer;
-      font-family: sans-serif; letter-spacing: 2px;
+      font-family: sans-serif; 
+      letter-spacing: 2px;
+      font-size: 17px;
     }
 
     .botonnetwork:hover, .botoncloud:hover, .botondata:hover, .botonetc:hover {
-      background-color: #000000;
+      background-image: linear-gradient(#222275, #3b1160);
     }
 
     .content-container {
@@ -41,9 +45,10 @@
 
     .ddbox {
       display: none; /* Hide all content by default */
-      background: #f2dddd;
-      padding: 20px;
-      border: 2px solid black;
+      background: #fff2f2;
+      padding-top: 0px;
+      padding-left: 20px;
+      border: 2px solid rgb(96, 96, 96);
       max-width: 1000px;
       margin-left: 5px;
     }
@@ -51,43 +56,45 @@
 </head>
 
 <body>
-  <div style="background-color:#d4ecd6; max-width: 500px; padding-left: 10px; border: 2px solid black; margin-bottom: 10px;">
+  <div style="background-image:linear-gradient(#eaffeb,#eaf0ff); max-width: 500px; padding-left: 10px; border: 2px solid rgb(0, 0, 0); margin-bottom: 10px;">
     <h3>Tech Learning Documentation</h3>
     <p>This page is a documentation of my learning in various tech domains.</p><p>It serves as a complement to the pdf version of my CV.</p><p><b>Natthajak Kamkru</b></p>
   </div>
 
   <!-- Button Container -->
   <div class="button-container">
-    <a href="#" class="botonnetwork"><b>networking</b></a>
-    <a href="#" class="botoncloud"><b>cloud</b></a>
-    <a href="#" class="botondata"><b>data</b></a>
-    <a href="#" class="botonetc"><b>etc.</b></a>
+    <a href="#" class="botonnetwork">networking</a>
+    <a href="#" class="botoncloud">cloud</a>
+    <a href="#" class="botondata">data</a>
+    <a href="#" class="botonetc">etc.</a>
   </div>
 
   <!-- Content Container -->
   <div class="content-container">
     <div id="divnetwork" class="ddbox">
       <h2>Computer Networking</h2>
-      <h3>«Para nosotros la fiesta es uno de los puntos vitales y más importantes, tenemos un buen presupuesto reservado para ello.»</h3>
-      <p>Alex Muñoz, como fundador de Exel Eventos, cuenta con una dilatada experiencia en bodas. Además, es técnico de sonido e iluminación, trata cada boda como una obra de arte única e irrepetible. ¡Está deseando conocerte!</p>
+      <h3></h3>
+      <p></p>
     </div>
 
     <div id="divcloud" class="ddbox">
       <h2>Cloud</h2>
-      <h3>«Le doy mucha <span style="text-decoration: underline;">importancia a la fiesta de mi boda</span> y tengo presupuesto reservado para esta parte de la boda.»</h3>
-      <p>Exel DJs es tu mejor opción: DJs animadores que saldrán a la pista si la fiesta sufre uno o varios bajones, y lo más importante… contarás con DJs experimentados y podrás conocerles desde el mismo momento de la contratación, aunque quede más de un año para tu boda. Además, podrás elegir entre distintos paquetes de iluminación para la fiesta.</p>
+      <h3>Setting up AWS resources using Terraform</h3><p></p>
     </div>
 
     <div id="divdata" class="ddbox">
       <h2>Data</h2>
-      <h3>«Tengo muy poco presupuesto y no me importa contar con un buen DJ, le daré una Playlist o incluso me vale con el equipo alquilado.»</h3>
-      <p>Play Yourself es tu mejor solución, puedes alquilarlo sin DJ o contar con un DJ tradicional NO Animador.</p>
+      <h3></h3>
+      <p></p>
     </div>
 
     <div id="divetc" class="ddbox">
-      <h2>ETC.</h2>
-      <h3>«Tengo muy poco presupuesto y no me importa contar con un buen DJ, le daré una Playlist o incluso me vale con el equipo alquilado.»</h3>
-      <p>Play Yourself es tu mejor solución, puedes alquilarlo sin DJ o contar con un DJ tradicional NO Animador.</p>
+      <h2>Etc.</h2>
+      <h3>&#9670;&nbsp;Hubspot/Airtable Automation using Zapier and Python</h3>
+      <p>...</p>
+      <h3>&#9670;&nbsp;Mathematical problem solvings</h3>
+      <p>I have always enjoyed solving mathematical problems and exploring abstract concepts. 
+        I have published a couple of research papers; see this link for more information.</p>
     </div>
   </div>
 
