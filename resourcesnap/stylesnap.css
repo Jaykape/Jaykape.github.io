@@ -111,7 +111,6 @@ a {
     align-self: flex-start; /* Aligns the box to the left */
     text-align: left; /* Ensures content within the box aligns left */
     padding: 20px;
-    max-width: 1000px;
     margin-top: 20px;
     color: rgb(61, 102, 137);
 }
