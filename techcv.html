@@ -18,7 +18,7 @@
       margin-bottom: 20px; /* Space between buttons and content */
     }
 
-    .botonnetwork, .botoncloud, .botondata, .botonetc {
+    .boton {
       display: inline-block;
       padding: 10px 20px;
       margin: 5px;
@@ -34,7 +34,7 @@
       font-size: 17px;
     }
 
-    .botonnetwork:hover, .botoncloud:hover, .botondata:hover, .botonetc:hover {
+    .boton:hover {
       background-image: linear-gradient(#222275, #3b1160);
     }
 
@@ -56,17 +56,18 @@
 </head>
 
 <body>
-  <div style="background-image:linear-gradient(#eaffeb,#eaf0ff); max-width: 500px; padding-left: 10px; border: 2px solid rgb(0, 0, 0); margin-bottom: 10px;">
+  <div style="background-image:linear-gradient(#eaffeb,#eaf0ff); max-width: 700px; padding-left: 10px; border: 2px solid rgb(0, 0, 0); margin-bottom: 10px;">
     <h3>Tech Learning Documentation</h3>
-    <p>This page is a documentation of my learning in various tech domains.</p><p>It serves as a complement to the pdf version of my CV.</p><p><b>Natthajak Kamkru</b></p>
+    <p>This page is a documentation of my learning in various tech domains and my work experiences.</p><p>It serves as a complement to the pdf version of my CV.</p><p><b>Natthajak Kamkru</b></p>
   </div>
 
   <!-- Button Container -->
   <div class="button-container">
-    <a href="#" class="botonnetwork">networking</a>
-    <a href="#" class="botoncloud">cloud</a>
-    <a href="#" class="botondata">data</a>
-    <a href="#" class="botonetc">etc.</a>
+    <a href="#" class="boton" data-target="divnetwork">networking</a>
+    <a href="#" class="boton"data-target="divcloud">cloud</a>
+    <a href="#" class="boton" data-target="divdata">data</a>
+    <a href="#" class="boton" data-target="divwork">work exp</a>
+    <a href="#" class="boton" data-target="divetc">etc.</a>
   </div>
 
   <!-- Content Container -->
@@ -88,6 +89,23 @@
       <p></p>
     </div>
 
+    <div id="divwork" class="ddbox">
+      <h2>Work Experiences</h2>
+      
+      <h3>&#9670;&nbsp;IT Specialist <span style="font-weight: 500; font-size: smaller;">&nbsp;&nbsp; Nov 2024 - present</span></h3>
+      <p style="margin-top: -17px;">Azure Rich Group </p>
+
+      <h3>&#9670;&nbsp;Civil Engineer (internship) <span style="font-weight: 500; font-size: smaller;">&nbsp;&nbsp; June 2020 - July 2020 (2 months)</span></h3>
+      <p style="margin-top: -17px;">Asian Engineering Consultants Corp., Ltd.</p>
+      <p style="margin-top: -11px;">participated in the construction of the MRT Yellow Line</p>
+
+      <!-- template
+      <h3>&#9670;&nbsp;</h3>
+      <p style="margin-top: -15px;"></p> 
+      -->
+
+    </div>
+
     <div id="divetc" class="ddbox">
       <h2>Etc.</h2>
       <h3>&#9670;&nbsp;Hubspot/Airtable Automation using Zapier and Python</h3>
@@ -105,35 +123,22 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-      // Hide all content initially
-      $('.ddbox').hide();
+    $(document).ready(function () {
+  // Hide all content initially
+  $('.ddbox').hide();
 
-      // Add click event for each button
-      $('.botonnetwork').click(function(e) {
-        e.preventDefault();
-        $('#divnetwork').fadeToggle(); // toggle visibility
-        $('#divcloud, #divdata, #divetc').hide(); // hide other sections
-      });
+  // Add a single event listener for all buttons
+  $('.boton').click(function (e) {
+    e.preventDefault();
 
-      $('.botoncloud').click(function(e) {
-        e.preventDefault();
-        $('#divcloud').fadeToggle(); 
-        $('#divnetwork, #divdata, #divetc').hide(); 
-      });
+    // Get the target section ID from the data attribute
+    const targetId = $(this).data('target');
 
-      $('.botondata').click(function(e) {
-        e.preventDefault();
-        $('#divdata').fadeToggle(); 
-        $('#divcloud, #divnetwork, #divetc').hide();
-      });
-
-      $('.botonetc').click(function(e) {
-        e.preventDefault();
-        $('#divetc').fadeToggle(); 
-        $('#divnetwork, #divdata, #divcloud').hide(); 
-      });
-    });
+    // Toggle the target section and hide others
+    $(`#${targetId}`).fadeToggle();
+    $('.ddbox').not(`#${targetId}`).hide(); // Hide all other sections
+  });
+});
   </script>
 </body>
 </html>
