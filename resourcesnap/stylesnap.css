@@ -136,7 +136,6 @@ a {
         top: 50%;
         left: 50%;
         max-width: 400px;
-        max-height: 400px;
         transform: translate(-50%, -50%);
         width: 90vw; /* 80% of the viewport width */ 
         z-index: 10;
