@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maths</title>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js">
+  </script>
+    <style>
+        .brrx {
+          margin-top: 20px; 
+          margin-bottom: 20px; 
+        }
+        </style>
+</head>
+
+<h2>When is a module flat?</h2>
+We already know that tensor is left exact, so the question is reduced to 
+when \( \otimes M\) preserving injectivity.<br><br>
+
+An easy example of failure is given by the multiplication by 2 map \(\mathbb{Z} \rightarrow \mathbb{Z}\)<br>
+When tensoring with \(\mathbb{Z}/2\), we get &nbsp;\(\mathbb{Z}\otimes \mathbb{Z}/2\rightarrow \mathbb{Z}\otimes\mathbb{Z}/2\), &nbsp;\(x\otimes y\mapsto 2x\otimes y\).<br>
+A nonzero element \( 1 \otimes 1\) is mapped to \( 2\otimes 1=2(1 \otimes 1)=1\otimes 2 =0 \).<br><br>
+
+This is caused by the fact that every simple element is a 2-torsion.<br>
+So I'm curious, did all failures come from torsioness?
+</html>
