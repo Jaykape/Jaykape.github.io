@@ -18,6 +18,15 @@
       margin-top: -10px;
     }
 
+    .coldiv {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.482);
+      max-width: 400px;
+      padding-left: 5px;
+      margin-left: 5px;
+      margin-bottom: 15px;
+    }
+
     @media only screen and (max-width: 800px) {}
 
     @media only screen and (max-width: 500px) {}
@@ -27,12 +36,12 @@
 <body style="font-family: courier, monospace; letter-spacing: -0.5px;">
   <br>
   <div class="outdiv">
-    <div style="background-color: #bcefd2; max-width: 1000px; padding-left: 2px;">
+    <div style="background-color: #bcefd2; max-width: 1000px; padding-left: 7px; ">
       <h3>Natthajak Kamkru</h3>
       <p>I've been actively learning and doing research in mathematics since 2023.</p>
     </div>
 
-    <div style="background-color: #bcdbef; max-width: 1000px; padding-left: 2px;">
+    <div style="background-color: #bcdbef; max-width: 1000px; padding-left: 7px; ">
       <h3 style="margin-bottom: 2px;">Master's Thesis 2024</h3><br>
       <b>Advisor:</b> Nattapon Sonpanow at Chulalongkorn University<br><br>
       <b>Field:</b> Set Theory / Mathematical Logic<br><br>
@@ -48,19 +57,55 @@
       </p>
     </div>
 
-    <div style="background-color: #efbce5; max-width: 1000px; padding-left: 2px;">
+    <div style="background-color: #efbce5; max-width: 1000px; padding-left: 7px; ">
       <h3 style="margin-bottom: 2px;">? (Ongoing)</h3><br>
       <b>Field:</b> Number Theory / Algebraic Geometry<br>
       <p>...</p>
     </div>
 
-    <div style="background-color: #efebbc; max-width: 1000px; padding-left: 2px;">
-      <h3 style="margin-bottom: 2px;">Reflecting on Random Thoughts</h3>
-      <a href="resourcemath/flat.html">When is a module flat?</a><br>
-     
+    <div style="background-color: #efebbc; max-width: 1000px; padding-left: 7px; ">
+      <h3 style="margin-bottom: 2px;">Collections</h3>
+      These are my collections of math info that I have collected from various sources and rewritten during my learning process.
+      <br><br>
+      <button onclick="toggle('divalggeo')" style="border: none;">Algebraic Geometry</button>
+      <br><br>
+        <div  id="divalggeo" class="coldiv">
+          &#x25C6; <a href="resourcemath/flat.html"><b>Schemes</b></a><br>
+          &#x25C6; <b>Sheaves</b><br>
+          &nbsp;&#x25C7; <a href="resourcemath/sheaves.html" style="font-size: smaller;">General</a><br>
+          &nbsp;&#x25C7; <a href="resourcemath/sheavesofmodules.html" style="font-size: smaller;">Sheaves of Modules</a><br>
+          &#x25C6; <b>Morphisms</b><br>
+          &nbsp;&#x25C7; <a href="resourcemath/flat.html" style="font-size: smaller;">General</a><br>
+          &nbsp;&#x25C7; <a href="resourcemath/flat.html" style="font-size: smaller;">Finiteness</a><br>
+          &nbsp;&#x25C7; <a href="resourcemath/flat.html" style="font-size: smaller;">Separatedness and Properness</a><br>
+          &nbsp;&#x25C7; <a href="resourcemath/flat.html" style="font-size: smaller;">Flatness</a><br>
+          &nbsp;&#x25C7; <a href="resourcemath/flat.html" style="font-size: smaller;">Flatness</a><br>
+          &nbsp;&#x25C7; <a href="resourcemath/flat.html" style="font-size: smaller;">Smoothness</a><br>
+        </div>
+
+        
+        <button onclick="toggle('divnt')" style="border: none;">Number Theory</button>
+        <br><br>
+          <div  id="divnt" class="coldiv">
+            <a href="resourcemath/flat.html">ccc</a><br>
+          </div>
+     <br>
 
     </div>
   </div>
 </body>
+
+
+
+<script>
+  function toggle(elementId) {
+var element = document.getElementById(elementId);
+if (element.style.display === "none" || element.style.display === "") {
+  element.style.display = "block";
+} else {
+  element.style.display = "none";
+}
+}
+</script>
 
 </html>
